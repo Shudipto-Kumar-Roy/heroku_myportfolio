@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+:root {
+  --dark-color: #2D4263;
+  --white-color: #f7f7f7;
+  --link-color: rgb(63, 46, 158);
+  --text-font-size: 1.4rem;
+  --banner-heading: 5rem;
+  --main--heading-size: 3rem;
+  --sub--heading-size: 2rem;
+  --small--heading-size: 1.5rem;
+}
+#banner_id {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -8rem;
+}
+.banner {
+  background-image: url("../../../images/home_b1.jpg");
+  background-position: left left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.banner > h1 {
+  font-size: var(--banner-heading);
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+.banner > img {
+  display: inline;
+  filter: drop-shadow(0.5rem 0.5rem 1rem var(--white-color));
+  width: 10rem;
+  height: auto;
+  z-index: 1;
+}
+.banner > h4 {
+  font-size: var(--sub--heading-size);
+  color: var(--dark-color);
+  padding: 0.2rem;
+  background-color: var(--white-color);
+}
+
+/* Responsive Design */
+/* Mobile devices */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .banner > h1 {
+    font-size: 2rem;
+  }
+  .banner > img {
+    filter: drop-shadow(0.1rem 0.1rem 0.5rem var(--white-color));
+    width: 5rem;
+  }
+  .banner > h4 {
+    font-size: 1.5rem;
+  }
+}
+/* iPads, Tablets. */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .banner > h1 {
+    font-size: 2.5rem;
+  }
+  .banner > img {
+    filter: drop-shadow(0.2rem 0.2rem 0.8rem var(--white-color));
+    width: 8rem;
+  }
+  .banner > h4 {
+    font-size: 1.5rem;
+  }
+}
+/* Small screens, laptops. */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .banner > h1 {
+    font-size: 2.8rem;
+  }
+  .banner > img {
+    filter: drop-shadow(0.1rem 0.1rem 0.5rem var(--white-color));
+    width: 9rem;
+  }
+  .banner > h4 {
+    font-size: 1.8rem;
+  }
+}
+/* Desktops, large screens. */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+/* Extra large screens, TV. */
+@media only screen and (min-width: 1201px) {
+}

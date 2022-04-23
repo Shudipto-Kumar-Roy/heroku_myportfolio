@@ -1,0 +1,109 @@
+:root {
+  --dark-color: #2d4263;
+  --white-color: #f7f7f7;
+  --link-color: rgb(63, 46, 158);
+  --text-font-size: 1.4rem;
+  --main--heading-size: 3rem;
+  --sub--heading-size: 2rem;
+  --small--heading-size: 1.5rem;
+}
+#about_id {
+  width: 100vw;
+  height: auto;
+  background-color: var(--dark-color);
+  padding: 8rem 0;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  border-top: 1rem double var(--white-color);
+}
+.about {
+}
+.about_col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.about_col h1 {
+  font-size: var(--main--heading-size);
+  font-weight: 500;
+  color: var(--white-color);
+  margin-bottom: 1rem;
+}
+.about_col h4 {
+  font-size: var(--sub--heading-size);
+  font-weight: 400;
+  color: var(--white-color);
+  margin-bottom: 1rem;
+}
+.about_col p {
+  font-size: var(--text-font-size);
+  font-weight: 300;
+  color: var(--white-color);
+  margin-bottom: 1rem;
+}
+.about_col button {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: transparent;
+  color: var(--white-color);
+  border: 0.1rem solid var(--white-color);
+  outline: none;
+  margin-right: 1rem;
+  transition: 0.5s all;
+}
+.about_col button:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  border: 0.1rem solid var(--dark-color);
+}
+.about_col button > * {
+  font-size: var(--text-font-size);
+  margin-left: 0.5rem;
+}
+.about_image {
+  width: 25rem;
+  height: auto;
+}
+
+/* Responsive Design */
+/* Mobile devices */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #about_id {
+    padding: 4rem 0;
+  }
+  .about_image {
+    width: 20rem;
+  }
+  .about_col h1 {
+    font-size: 2.5rem;
+  }
+  .about_col h4 {
+    font-size: 1.8rem;
+  }
+  .about_col p {
+    font-size: 1.2rem;
+  }
+  .about_col button {
+    font-size: 1.2rem;
+  }
+}
+/* iPads, Tablets. */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .about_col p {
+    font-size: 1.4rem;
+  }
+  .about_col button {
+    font-size: 1.4rem;
+  }
+}
+/* Small screens, laptops. */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+}
+/* Desktops, large screens. */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+/* Extra large screens, TV. */
+@media only screen and (min-width: 1201px) {
+}

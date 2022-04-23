@@ -1,0 +1,113 @@
+:root {
+  --dark-color: #2d4263;
+  --white-color: #f7f7f7;
+  --link-color: rgb(63, 46, 158);
+  --text-font-size: 1.4rem;
+  --main--heading-size: 3rem;
+  --sub--heading-size: 2rem;
+  --small--heading-size: 1.5rem;
+}
+
+.admin_col:first-child {
+  border: 0.1rem solid var(--dark-color);
+  display: flex;
+  flex-direction: column;
+}
+.admin_col:last-child {
+  border: 0.1rem solid var(--dark-color);
+  border-left: 0;
+}
+.admin_heading {
+  font-size: var(--main--heading-size);
+  font-weight: 500;
+  color: var(--dark-color);
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-bottom: 0.1rem solid --dark-color;
+}
+.admin_nav_button {
+  margin: 0.1rem 0;
+  text-align: left;
+}
+.nav_link_admin {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--dark-color);
+  text-decoration: none;
+  font-size: var(--small--heading-size);
+  font-weight: 400;
+  cursor: pointer;
+  color: var(--white-color);
+  margin: 0.5rem 0;
+}
+.nav_link_admin:hover {
+  color: var(--white-color);
+}
+
+/* Responsive Design */
+/* Mobile devices */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .admin_col:first-child {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .admin_col:last-child {
+    border: none;
+    border-top: 0.1rem solid var(--dark-color);
+  }
+  .admin_nav_button {
+    margin: 0.1rem 1rem;
+    text-align: left;
+  }
+  .nav_link_admin {
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+}
+/* iPads, Tablets. */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .admin_col:first-child {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .admin_col:last-child {
+    border: none;
+    border-top: 0.1rem solid var(--dark-color);
+  }
+  .admin_nav_button {
+    margin: 0.1rem 1rem;
+    text-align: left;
+  }
+  .nav_link_admin {
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+}
+/* Small screens, laptops. */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .admin_nav_button {
+    margin: 0.1rem 0;
+    text-align: left;
+  }
+  .nav_link_admin {
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+}
+/* Desktops, large screens. */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+/* Extra large screens, TV. */
+@media only screen and (min-width: 1201px) {
+}

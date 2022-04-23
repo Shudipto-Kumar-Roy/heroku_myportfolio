@@ -1,0 +1,49 @@
+:root {
+  --dark-color: #2D4263;
+  --white-color: #f7f7f7;
+  --link-color: rgb(63, 46, 158);
+  --text-font-size: 1.4rem;
+  --main--heading-size: 3rem;
+  --sub--heading-size: 2rem;
+  --small--heading-size: 1.5rem;
+}
+#projects_id {
+  widows: 100vw;
+  height: auto;
+  padding: 8rem 0;
+}
+.projects_col {
+}
+.projects_heading {
+  font-size: var(--main--heading-size);
+  font-weight: 500;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+/* Mobile devices */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #projects_id {
+    padding: 4rem 0;
+  }
+}
+/* iPads, Tablets. */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #projects_id {
+    padding: 4rem 0;
+  }
+}
+
+/* Small screens, laptops. */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #projects_id {
+    padding: 4rem 0;
+  }
+}
+/* Desktops, large screens. */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+/* Extra large screens, TV. */
+@media only screen and (min-width: 1201px) {
+}

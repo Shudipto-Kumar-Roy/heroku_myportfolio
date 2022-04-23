@@ -1,0 +1,56 @@
+:root {
+  --dark-color: #2D4263;
+  --white-color: #f7f7f7;
+  --link-color: rgb(63, 46, 158);
+  --text-font-size: 1.4rem;
+  --main--heading-size: 3rem;
+  --sub--heading-size: 2rem;
+  --small--heading-size: 1.5rem;
+}
+
+.admin_project_card {
+  width: 100%;
+  height: auto;
+  padding: 1rem 1rem;
+}
+.admin_project_card_title {
+  font-size: var(--sub--heading-size);
+  font-weight: 400;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+.admin_project_card_image {
+}
+.admin_project_card_description {
+  font-size: var(--text-font-size);
+  font-weight: 300;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+  text-align: left;
+  word-wrap: break-word;
+}
+.admin_project_card .admin_project_card_btn {
+  font-size: var(--text-font-size);
+  font-weight: 400;
+}
+
+/* Responsive Design */
+/* Mobile devices */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+}
+/* iPads, Tablets. */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+}
+/* Small screens, laptops. */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .admin_project_card_description {
+    font-size: 1.2rem;
+  }
+}
+/* Desktops, large screens. */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+/* Extra large screens, TV. */
+@media only screen and (min-width: 1201px) {
+}

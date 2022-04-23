@@ -1,0 +1,154 @@
+:root {
+  --dark-color: #2D4263;
+  --white-color: #f7f7f7;
+  --link-color: rgb(63, 46, 158);
+  --text-font-size: 1.4rem;
+  --main--heading-size: 3rem;
+  --sub--heading-size: 2rem;
+  --small--heading-size: 1.5rem;
+}
+.caresoul_conatainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carsoul_image {
+  width: 100%;
+  height: 100%;
+}
+.carsoul_image > img {
+  object-fit: cover;
+}
+.carsoul_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  /* top: 10%;
+  left: 50%;
+  transform: translateX(-50%); */
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4rem;
+}
+.carsoul_content > h1 {
+  font-size: var(--main--heading-size);
+  font-weight: 500;
+  color: var(--white-color);
+  margin-top: 2rem;
+}
+.carsoul_content > h6 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--white-color);
+  margin-top: 2rem;
+}
+.carsoul_content > p {
+  font-size: var(--text-font-size);
+  font-weight: 400;
+  color: var(--white-color);
+  margin-top: 2rem;
+}
+.carsoul_content > button {
+  padding: 0.5rem 1rem;
+  font-size: var(--text-font-size);
+  font-weight: 400;
+  background-color: transparent;
+  color: var(--white-color);
+  border: 0.1rem solid var(--white-color);
+  outline: none;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
+  transition: 0.5s all;
+}
+.carsoul_content > button:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  border: 0.1rem solid var(--dark-color);
+}
+
+/* Responsive Design */
+/* Mobile devices */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .carsoul_content > h1 {
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+  .carsoul_content > p {
+    display: none;
+  }
+  .carsoul_content > h6 {
+    display: none;
+  }
+  .carsoul_content > button {
+    padding: 0.1rem 0.5rem;
+    font-size: 1rem;
+    margin: 0;
+    transition: 0.5s all;
+  }
+}
+/* iPads, Tablets. */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .carsoul_content > h1 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  .carsoul_content > p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    /* display: none; */
+  }
+  .carsoul_content > h6 {
+    display: none;
+  }
+  .carsoul_content > button {
+    padding: 0.1rem 0.5rem;
+    font-size: 1rem;
+    margin: 0;
+    transition: 0.5s all;
+  }
+}
+
+/* Small screens, laptops. */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .carsoul_content > h1 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .carsoul_content > p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    /* display: none; */
+  }
+  .carsoul_content > h6 {
+    display: none;
+  }
+  .carsoul_content > button {
+    padding: 0.3rem 0.7rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    transition: 0.5s all;
+  }
+}
+/* Desktops, large screens. */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .carsoul_content > h1 {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  .carsoul_content > p {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    /* display: none; */
+  }
+
+  .carsoul_content > button {
+    padding: 0.3rem 0.7rem;
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    transition: 0.5s all;
+  }
+}
+/* Extra large screens, TV. */
+@media only screen and (min-width: 1201px) {
+}

@@ -1,0 +1,130 @@
+:root {
+  --dark-color: #2d4263;
+  --white-color: #f7f7f7;
+  --link-color: rgb(63, 46, 158);
+  --text-font-size: 1.4rem;
+  --main--heading-size: 3rem;
+  --sub--heading-size: 2rem;
+  --small--heading-size: 1.5rem;
+}
+.main_nav {
+  background-color: var(--dark-color) !important;
+  border-bottom-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  position: sticky !important;
+  padding: 0 !important;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+}
+.nav_bar {
+  padding: 1.2rem 1.2rem;
+}
+.logo {
+  width: 20rem;
+  height: auto;
+}
+.hamburger_button {
+  background-color: var(--white-color) !important;
+}
+
+.nav_link_container {
+  display: flex;
+  align-items: center;
+}
+.nav_link_container .nav_link {
+  font-size: var(--small--heading-size);
+  color: var(--white-color) !important;
+  font-weight: 400;
+  cursor: pointer;
+  margin: 0 0.8rem;
+}
+.nav_link_container .nav_link .nav_link_component {
+  display: flex;
+  align-items: center;
+}
+.nav_link_container .nav_link .nav_link_component span {
+  display: inline-block;
+}
+.nav_link_container .nav_link .nav_link_component span:first-child {
+  font-size: 3rem;
+}
+.nav_link_container .nav_link .nav_link_component span:last-child {
+  font-size: 1.3rem;
+  padding-top: 1rem;
+}
+.nav_link_container .dropdown_toggler {
+  display: flex;
+  vertical-align: middle;
+}
+.nav_link_container .dropdown_toggler > a {
+  font-size: 1.3rem;
+  color: var(--white-color) !important;
+  font-weight: 400;
+  cursor: pointer;
+  margin: 1rem 0 0 0;
+}
+.nav_link_container .dropdown_nav_link {
+  font-size: var(--small--heading-size);
+  color: var(--dark-color) !important;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* Modal */
+.custommodal .modal_form_control {
+  font-size: var(--text-font-size);
+  font-weight: 400;
+  color: var(--dark-color);
+  outline: none;
+  border: none;
+  border-bottom: 0.2rem solid var(--dark-color);
+}
+
+.custommodal .modal_btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border: 0.1rem solid var(--white-color);
+  outline: none;
+  margin-right: 1rem;
+  transition: 0.5s all;
+}
+.custommodal .modal_btn:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  border: 0.1rem solid var(--dark-color);
+}
+.custommodal .forgot_password_link {
+  text-decoration: none;
+  font-size: var(--text-font-size);
+  padding: 0 1rem;
+  color: var(--dark-color);
+}
+
+/* Responsive */
+@media only screen and (max-width: 991px) {
+  .nav_link_container {
+    display: flex;
+    align-items: flex-start;
+  }
+  .nav_link_container .dropdown_toggler > a {
+    font-size: 1.3rem;
+    color: var(--white-color) !important;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 1rem 0 0 1rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .nav_link_container .dropdown_toggler .dropdown-menu {
+    position: absolute;
+    left: -5rem;
+}
+.custommodal {
+    margin: 10rem auto;
+}
+}
+

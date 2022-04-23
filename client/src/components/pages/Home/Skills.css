@@ -1,0 +1,81 @@
+:root {
+  --dark-color: #2d4263;
+  --white-color: #f7f7f7;
+  --link-color: rgb(63, 46, 158);
+  --text-font-size: 1.4rem;
+  --main--heading-size: 3rem;
+  --sub--heading-size: 2rem;
+  --small--heading-size: 1.5rem;
+}
+#skills_id {
+  width: 100vw;
+  height: auto;
+  padding: 8rem 0;
+  background-color: var(--dark-color);
+  
+}
+.skills_col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+.skill_progress {
+  width: 90%;
+  padding: 1rem;
+}
+.skills_col > h4 {
+  margin-top: 1rem;
+  color: var(--white-color);
+}
+.skills_col > h4 > span {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: var(--main--heading-size);
+}
+.skills_heading {
+  font-size: var(--main--heading-size);
+  font-weight: 500;
+  color: var(--white-color);
+  margin-bottom: 4rem;
+}
+
+/* Responsive Design */
+/* Mobile devices */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #skills_id {
+    padding: 6rem 0;
+  }
+  .skills_col {
+    margin: 1rem;
+  }
+  .skills_col > h4 {
+    margin-top: -3rem;
+  }
+  .skills_col > h4 > span {
+    font-size: 2rem;
+  }
+  .skills_heading {
+    font-size: var(--main--heading-size);
+    font-weight: 500;
+    color: var(--white-color);
+    margin-bottom: 4rem;
+  }
+  .skill_progress {
+    width: 20rem;
+    height: auto;
+    margin-bottom: 4rem;
+  }
+}
+/* iPads, Tablets. */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+}
+/* Small screens, laptops. */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+}
+/* Desktops, large screens. */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+/* Extra large screens, TV. */
+@media only screen and (min-width: 1201px) {
+}
