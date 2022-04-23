@@ -1,6 +1,6 @@
 if(process.env.NODE_ENV!=="PRODUCTION")
 {
-  require("dotenv").dotenv.config();
+  require("dotenv").config({path : "server/.env"});
 }
 const express = require("express");
 const cookieParser = require("cookie-parser");
