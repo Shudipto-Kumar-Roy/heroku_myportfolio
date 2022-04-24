@@ -7,25 +7,9 @@ export const sigupUserApi = async (user) => {
     return await axios.post("/signup", user);
   } catch (error) {
     if (error.response.status === 409) {
-      toast.info("User already exists with this email", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.info("User already exists with this email");
     } else {
-      toast.error(error.response.data.message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(error.response.data.message);
     }
   }
 };
@@ -36,35 +20,11 @@ export const loginUser = async (user) => {
     return await axios.post("/login", user);
   } catch (error) {
     if (error.response.status === 404) {
-      toast.error("User not found", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error("User not found");
     } else if (error.response.status === 401) {
-      toast.error("Invalid Credential", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error("Invalid Credential");
     } else {
-      toast.error(error.response.data.message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(error.response.data.message);
     }
   }
 };
@@ -74,15 +34,7 @@ export const logout = async () => {
   try {
     return await axios.get("/logout");
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -91,15 +43,7 @@ export const uploadFileApi = async (base64File) => {
   try {
     return await axios.post("/upload/pdf", { base64File });
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -108,15 +52,7 @@ export const getPdfFileApi = async () => {
   try {
     return await axios.get("/pdffile");
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -125,15 +61,7 @@ export const deleteResumeApi = async (id) => {
   try {
     return await axios.delete(`/delete/resume/${id}`);
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 // For create project api
@@ -141,15 +69,7 @@ export const createProjectsApi = async (post) => {
   try {
     return await axios.post("/projectcreate", post);
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -158,15 +78,7 @@ export const createSkillApi = async (skillstate) => {
   try {
     return await axios.post("/skillcreate", skillstate);
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -175,15 +87,7 @@ export const createEducationApi = async (educationstate) => {
   try {
     return await axios.post("/educationcreate", educationstate);
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -192,15 +96,7 @@ export const updateProjectsApi = async (id, post) => {
   try {
     return await axios.put(`/updateproject/${id}`, post);
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -209,15 +105,7 @@ export const updateEducationApi = async (id, educationstate) => {
   try {
     return await axios.put(`/updateeducation/${id}`, educationstate);
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -226,15 +114,7 @@ export const updateSkillApi = async (id, skillstate) => {
   try {
     return await axios.put(`/updateskill/${id}`, skillstate);
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -243,15 +123,7 @@ export const fetchProjectData = async () => {
   try {
     return await axios.get("/getprojectdata");
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -260,15 +132,7 @@ export const getAllSkillsApi = async () => {
   try {
     return await axios.get("/getskills");
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -277,15 +141,7 @@ export const getEducationApi = async () => {
   try {
     return await axios.get("/geteducationdata");
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -295,25 +151,9 @@ export const fetchSingleProject = async (id) => {
     return await axios.get(`/getsingleproject/${id}`);
   } catch (error) {
     if (error.response.status === 404) {
-      toast.error(`Project Data not found`, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(`Project Data not found`);
     } else {
-      toast.error(error.response.data.message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(error.response.data.message);
     }
   }
 };
@@ -324,25 +164,9 @@ export const fetchSingleEducation = async (id) => {
     return await axios.get(`/getsingleeducation/${id}`);
   } catch (error) {
     if (error.response.status === 404) {
-      toast.error(`Education not found`, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(`Education not found`);
     } else {
-      toast.error(error.response.data.message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(error.response.data.message);
     }
   }
 };
@@ -353,25 +177,9 @@ export const fetchSingleSkill = async (id) => {
     return await axios.get(`/getsingleskill/${id}`);
   } catch (error) {
     if (error.response.status === 404) {
-      toast.error("Skill not found", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error("Skill not found");
     } else {
-      toast.error(error.response.data.message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(error.response.data.message);
     }
   }
 };
@@ -382,25 +190,9 @@ export const delteProject = async (id) => {
     return await axios.delete(`/deleteproject/${id}`);
   } catch (error) {
     if (error.response.status === 404) {
-      toast.error("Project not found", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error("Project not found");
     } else {
-      toast.error(error.response.data.message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(error.response.data.message);
     }
   }
 };
@@ -411,25 +203,9 @@ export const deleteEducation = async (id) => {
     return await axios.delete(`/deleteeducation/${id}`);
   } catch (error) {
     if (error.response.status === 404) {
-      toast.error("Education not found", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error("Education not found");
     } else {
-      toast.error(error.response.data.message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(error.response.data.message);
     }
   }
 };
@@ -440,25 +216,9 @@ export const deleteSkill = async (id) => {
     return await axios.delete(`/deleteskill/${id}`);
   } catch (error) {
     if (error.response.status === 404) {
-      toast.error("Skill not found", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error("Skill not found");
     } else {
-      toast.error(error.response.data.message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(error.response.data.message);
     }
   }
 };
@@ -468,15 +228,7 @@ export const feedbackCreate = async (userfeedback) => {
   try {
     return await axios.post("/user/feedback", userfeedback);
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };
 
@@ -486,25 +238,9 @@ export const forgotPassword = async (email) => {
     return await axios.post("/password/forgot", { email });
   } catch (error) {
     if (error.response.status === 404) {
-      toast.error("User not found", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error("User not found");
     } else {
-      toast.error(error.response.data.message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.error(error.response.data.message);
     }
   }
 };
@@ -514,14 +250,6 @@ export const resetPassword = async (resetstate, token) => {
   try {
     return await axios.put(`/password/reset/${token}`, resetstate);
   } catch (error) {
-    toast.error(error.response.data.message, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    toast.error(error.response.data.message);
   }
 };

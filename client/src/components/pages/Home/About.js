@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import image from "../../../images/about.png";
 import { AiOutlineCaretDown } from "react-icons/ai";
 import { Link } from "react-scroll";
-import { toast } from "react-toastify";
 import { getPdfFileApi } from "../../../api";
 
 

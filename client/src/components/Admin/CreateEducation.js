@@ -25,15 +25,7 @@ const CreateEducation = () => {
       const res = await createEducationApi(educationstate); // api call
       console.log(res.status);
       if (res.status === 201) {
-        toast.success("Education Created Successfully", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Education Created Successfully");
         setEducationState({
           degree: "",
           institution: "",

@@ -24,15 +24,7 @@ const AllSkills = () => {
       if (isOk) {
         const res = await deleteSkill(id); // api call
         if (res.status === 200) {
-          toast.success("Skill Deleted Successfully", {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
+          toast.success("Skill Deleted Successfully");
           setDeleteState(true);
         }
       }

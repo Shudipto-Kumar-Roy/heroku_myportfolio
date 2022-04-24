@@ -32,43 +32,12 @@ const UpdateEducation = () => {
     if (isValid) {
       const res = await updateEducationApi(id, educationstate); // api call
       if (res.status === 200) {
-        toast.success("Education Updated Successfully", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Education Updated Successfully");
         navigate("/admin/alleducations");
       }
     }
   };
 
-  // const callUpdateProjectPage = async () => {
-  //   try {
-  //     const res = await axios.get("/createproject");
-  //     if (res.data.rootUser.userRole !== "admin") {
-  //       navigate("/");
-  //     }
-  //   } catch (error) {
-  //     toast.error(`Getting User Data Failed ${error}`, {
-  //       position: "top-center",
-  //       autoClose: 5000,
-  //       hideProgressBar: false,
-  //       closeOnClick: true,
-  //       pauseOnHover: true,
-  //       draggable: true,
-  //       progress: undefined,
-  //     });
-  //     navigate("/");
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   callUpdateProjectPage();
-  // }, []);
 
   useEffect(() => {
     const getEducationData = async () => {

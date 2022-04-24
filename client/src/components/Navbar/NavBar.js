@@ -73,16 +73,7 @@ const NavBar = () => {
     if (isValidate) {
       const res = await loginUser(loginState); // api call
       if (res.status === 200) {
-        toast.success("Login Successfully", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-
+        toast.success("Login Successfully");
         setNavbarState({ ...navbarstate, login: true });
         setLoginShow(false);
         navigate("/");
@@ -103,15 +94,7 @@ const NavBar = () => {
     if (isValidate) {
       const res = await sigupUserApi(signupState); // api call
       if (res.status === 201) {
-        toast.success("Registration Successfully", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Registration Successfully");
         setSignupShow(false);
         setNavbarState({ ...navbarstate, login: true });
         navigate("/");
@@ -123,15 +106,7 @@ const NavBar = () => {
   const handleLogout = async () => {
     const res = await logout(); // api call
     if (res.status === 200) {
-      toast.info("Logged Out", {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      toast.info("Logged Out");
       setNavbarState({
         ...navbarstate,
         login: false,

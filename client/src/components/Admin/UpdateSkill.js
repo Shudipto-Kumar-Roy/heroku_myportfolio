@@ -20,15 +20,7 @@ const UpdateSkill = () => {
     if (isValid) {
       const res = await updateSkillApi(id,skillstate); // api call
       if (res.status === 200) {
-        toast.success("Skill Updated Successfully", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Skill Updated Successfully");
         setSkillState({ name: "", value: "" });
         navigate("/");
       }

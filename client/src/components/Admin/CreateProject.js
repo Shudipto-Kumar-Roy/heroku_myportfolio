@@ -49,15 +49,7 @@ const CreateProject = () => {
     if (isValid) {
       const res = await createProjectsApi(post); // api call
       if (res.status === 201) {
-        toast.success("Project Created Successfully", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Project Created Successfully");
         navigate("/admin");
       }
     }

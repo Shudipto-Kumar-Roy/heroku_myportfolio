@@ -22,15 +22,7 @@ const ResetPassword = () => {
     if (isValid) {
       const res = await resetPassword(resetstate, token);
       if (res.status === 200) {
-        toast.success(`Password Reset successfully`, {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success(`Password Reset successfully`);
         navigate("/");
       }
     }

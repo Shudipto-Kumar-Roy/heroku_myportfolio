@@ -29,15 +29,7 @@ const ContactMe = () => {
     if (isValid) {
       const res = await feedbackCreate(feedbackState); // api call
       if (res.status === 201) {
-        toast.success("Feedback Sent Successfully to admin", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Feedback Sent Successfully to admin");
         setFeedbackState({
           feedbackname: "",
           feedbackemail: "",

@@ -46,15 +46,7 @@ const UploadResume = () => {
     if (isValid) {
       const res = await uploadFileApi(base64File);
       if (res.status === 201) {
-        toast.success("Successfully uploaded file", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Successfully uploaded file");
       }
     }
   };

@@ -17,15 +17,7 @@ const ForgotPassword = () => {
     if (isValid) {
       const res = await forgotPassword(email);
       if (res.status === 200) {
-        toast.success(`Email sent to ${email} successfully`, {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success(`Email sent to ${email} successfully`);
         navigate("/");
       }
     }

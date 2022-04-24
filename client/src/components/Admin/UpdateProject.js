@@ -51,15 +51,7 @@ const UpdateProject = () => {
     if (isValid) {
       const res = await updateProjectsApi(id, post); // api call
       if (res.status === 200) {
-        toast.success("Project Updated Successfully", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Project Updated Successfully");
         navigate("/admin");
       }
     }

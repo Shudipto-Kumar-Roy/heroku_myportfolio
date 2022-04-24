@@ -24,15 +24,7 @@ const AllProjects = () => {
       if (isOk) {
         const res = await delteProject(id); // api call
         if (res.status === 200) {
-          toast.success("Project Deleted Successfull", {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
+          toast.success("Project Deleted Successfull");
           setDeleteState(true);
         }
       }

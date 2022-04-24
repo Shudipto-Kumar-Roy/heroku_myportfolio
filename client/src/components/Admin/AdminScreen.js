@@ -17,26 +17,10 @@ export const AdminScreen = () => {
       }
     } catch (error) {
       if (error.response.status === 401) {
-        toast.info(`Only admin can access the link`, {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.info(`Only admin can access the link`);
         navigate("/");
       } else {
-        toast.info(`Getting User Data Failed ${error}`, {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.info(`Getting User Data Failed ${error}`);
         navigate("/");
       }
     }

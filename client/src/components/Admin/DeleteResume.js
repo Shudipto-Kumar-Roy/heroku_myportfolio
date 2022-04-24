@@ -11,15 +11,7 @@ const DeleteResume = () => {
     if (isOk) {
       const res = await deleteResumeApi(id); // api call
       if (res.status === 200) {
-        toast.success("Resume Deleted Successfull", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Resume Deleted Successfull");
       }
     }
   };
@@ -28,15 +20,7 @@ const DeleteResume = () => {
     const getPdfFile = async () => {
       const res = await getPdfFileApi();
       if (res.status === 200) {
-        toast.success("Successfully getting file", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Successfully getting file");
         setPdf(res.data.file);
       }
     };

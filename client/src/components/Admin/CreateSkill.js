@@ -19,15 +19,7 @@ const CreateSkill = () => {
     if (isValid) {
       const res = await createSkillApi(skillstate); // api call
       if (res.status === 201) {
-        toast.success("Skill Created Successfully", {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        toast.success("Skill Created Successfully");
         setSkillState({ name: "", value: "" });
         navigate("/");
       }
