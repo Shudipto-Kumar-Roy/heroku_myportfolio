@@ -22,7 +22,7 @@ const sendfeedbackmail = async (options) => {
   });
   const mailOptions = {
     from: options.email,
-    to: process.env.SMTP_USER,
+    to: process.env.MYMAIL,
     subject: options.subject,
     html: options.body,
   };
