@@ -120,6 +120,10 @@
     cursor: pointer;
     margin: 1rem 0 0 1rem;
   }
+  .custommodal {
+    margin: 10rem auto;
+  }
+
 }
 @media only screen and (min-width: 992px) {
   .nav_link_container .dropdown_toggler .dropdown-menu {
