@@ -4,7 +4,6 @@ const {
   signUpController,
   loginController,
   logoutController,
-  createProjectController,
   adminScreenController,
   navbarController,
   forgotPassword,
@@ -17,14 +16,8 @@ router.post("/login", loginController);
 router.post("/password/forgot", forgotPassword);
 router.put("/password/reset/:token", resetPassword);
 router.get("/logout", logoutController);
-// router.get(
-//   "/createproject",
-//   isAuthenticatedUser,
-//   authorizeRoles("admin"),
-//   createProjectController
-// );
 router.get(
-  "/admin",
+  "/adminpage",
   isAuthenticatedUser,
   authorizeRoles("admin"),
   adminScreenController

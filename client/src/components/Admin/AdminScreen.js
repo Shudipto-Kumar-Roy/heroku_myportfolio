@@ -11,7 +11,7 @@ export const AdminScreen = () => {
   // Call admin page
   const callAdminPage = async () => {
     try {
-      const res = await axios.get("/admin");
+      const res = await axios.get("/adminpage");
       if (res.data.rootUser.userRole !== "admin") {
         navigate("/");
       }
