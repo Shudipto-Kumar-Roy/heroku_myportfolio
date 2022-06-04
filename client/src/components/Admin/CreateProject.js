@@ -12,6 +12,7 @@ const CreateProject = () => {
   // for projectstate
   const [post, setPost] = useState({
     name: "",
+    link : "",
     description: "",
     picture: "",
   });
@@ -68,6 +69,16 @@ const CreateProject = () => {
               value={post.name}
               onChange={inputHandle}
               placeholder="Enter Project Title"
+            />
+          </div>
+          <div className="create_form_group">
+            <input
+              type="url"
+              className="create_form_control"
+              name="link"
+              value={post.link}
+              onChange={inputHandle}
+              placeholder="Enter Project Link"
             />
           </div>
           <div className="create_form_group">

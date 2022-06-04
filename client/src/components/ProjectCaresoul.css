@@ -48,7 +48,8 @@
   color: var(--white-color);
   margin-top: 2rem;
 }
-.carsoul_content > button {
+.carsoul_content > a {
+  text-decoration: none;
   padding: 0.5rem 1rem;
   font-size: var(--text-font-size);
   font-weight: 400;
@@ -61,7 +62,7 @@
 
   transition: 0.5s all;
 }
-.carsoul_content > button:hover {
+.carsoul_content > a:hover {
   background-color: var(--white-color);
   color: var(--dark-color);
   border: 0.1rem solid var(--dark-color);

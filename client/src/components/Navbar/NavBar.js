@@ -264,17 +264,8 @@ const NavBar = () => {
                 >
                   Experiences
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
 
-                <NavDropdown.Item
-                  as={Link}
-                  to="/admin"
-                  className="dropdown_nav_link"
-                >
-                  Admin
-                </NavDropdown.Item>
 
-                <NavDropdown.Divider />
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

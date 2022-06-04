@@ -7,6 +7,11 @@ const projectSchema = new mongoose.Schema(
       required: [true, "Please enter project name "],
       unique: true,
     },
+    link: {
+      type: String,
+      unique: true
+    }
+    ,
     description: {
       type: String,
       required: [true, "Please enter project description "],

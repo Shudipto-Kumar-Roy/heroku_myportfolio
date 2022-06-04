@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ProjectCaresoul.css";
 import { fetchProjectData } from "../api";
+import { Link } from "react-router-dom";
 
 const ProjectCaresoul = () => {
   const [projectData, setProjectData] = useState([]);
@@ -42,7 +43,7 @@ const ProjectCaresoul = () => {
             <div className="carsoul_content">
               <h1>{project.name}</h1>
               <p>{project.description}</p>
-              <button>Live Demo</button>
+              <a href={`${project.link ? project.link : "/"}`} target="_blank">Live Demo</a>
               <h6>Created : {createdate}</h6>
               <h6>Updated : {updatedate}</h6>
             </div>

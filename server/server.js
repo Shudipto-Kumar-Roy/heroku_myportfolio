@@ -1,7 +1,7 @@
-if(process.env.NODE_ENV!=="PRODUCTION")
-{
-  require("dotenv").config({path : "server/.env"});
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config({ path: "server/.env" });
 }
+
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const path = require("path");
@@ -44,12 +44,11 @@ app.use("/", fileRoute);
 //last middleware for error
 app.use(errorMiddleware);
 
-if(process.env.NODE_ENV==="PRODUCTION")
-{
-app.use(express.static(path.join(__dirname, "../client/build")));
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
-});
+if (process.env.NODE_ENV === "PRODUCTION") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
+  });
 
 }
 
