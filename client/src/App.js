@@ -23,7 +23,7 @@ import DeleteResume from "./components/Admin/DeleteResume";
 function App() {
   return (
     <>
-      <ToastContainer 
+      <ToastContainer
         position="bottom-center"
         autoClose={5000}
         hideProgressBar={false}
